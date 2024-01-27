@@ -18,6 +18,7 @@ span {
 
 #notepad_window {
     width: 40%;
+    height: 85.5vh;
 }
 
 #notepad_window p {
@@ -26,6 +27,7 @@ span {
 
 #squeaker_window {
     width: 60%;
+    height: 85.5vh;
 }
 
 .window {
