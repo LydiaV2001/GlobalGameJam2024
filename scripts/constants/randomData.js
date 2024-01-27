@@ -164,7 +164,32 @@ export const randomSqueaks = {
             category: "nonMickey",
             body: "I sure do love eating cheese!",
             image: ""
+        },
+        {
+            body: "I will punch you..",
+        },
+        {
+            body: "Mmmm cheese :DDD"
+        },
+        {
+            body: "PLEASE don't microwave fish.."
+        },
+        {
+            body: "If you can't handle the sauce don't go to the sauce factory"
+        },
+        {
+            body: "Can't read without a boook"
+        },
+        {
+            body: "I love food #food"
+        },
+        {
+            body: "Microwave oven"
+        },
+        {
+            body: "Meatballs",
         }
+
     ]
     
 }

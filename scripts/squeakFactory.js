@@ -37,7 +37,7 @@ function addRandomSqueaks(data) {
         tag: author.tag,
         date: getRandomDate(),
         pfp: author.pfp,
-        category: squeak.category,
+        category: "nonMickey",
         body: squeak.body,
         image: "",
         likes: Math.floor(Math.random() * 100),
@@ -51,7 +51,7 @@ export function buildSqueaks() {
 
     let data = squeakData.squeaks;
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
         addRandomSqueaks(data)
     }
 
