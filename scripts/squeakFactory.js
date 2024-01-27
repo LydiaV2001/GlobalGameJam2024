@@ -2,37 +2,44 @@ import { squeakData } from "./constants/squeakData.js";
 
 let data = squeakData.squeaks;
 
+console.log(data);
+
 for (let i = 0; i < data.length; i++) {
 
     let squeaker = document.getElementById("squeaker");
 
     let squeak = document.createElement("div");
     squeak.classList.add("squeak");
-    squeak.classList.add(data[0].category);
+    squeak.classList.add(data[i].category);
 
     let userInfo = document.createElement("div");
     userInfo.classList.add("userInfo");
 
     let pfp = document.createElement("img");
     pfp.classList.add("pfp");
-    pfp.setAttribute("src", data[0].pfp);
+    pfp.setAttribute("src", data[i].pfp);
 
     let title = document.createElement("p");
     title.innerHTML = 
-        data[0].author + " " + 
-        data[0].tag + " · " +
-        data[0].date;
+        "<b>" +
+        data[i].author + 
+        "</b>" + 
+        " " +
+        "<span>" +
+        data[i].tag + " · " +
+        data[i].date +
+        "</span>";
 
     let body = document.createElement("div");
     body.classList.add("squeakBody");
 
     let text = document.createElement("p");
     text.classList.add("squeakText");
-    text.innerHTML = data[0].body;
+    text.innerHTML = data[i].body;
 
     let image = document.createElement("img");
     image.classList.add("squeakImage");
-    image.setAttribute("src", data[0].image);
+    image.setAttribute("src", data[i].image);
 
     let engagement = document.createElement("div");
     engagement.classList.add("engagement");
@@ -51,13 +58,13 @@ for (let i = 0; i < data.length; i++) {
     likeIcon.setAttribute("src", "/images/like.png")
 
     let replyCount = document.createElement("p");
-    replyCount.innerHTML = data[0].replies;
+    replyCount.innerHTML = "<span>" + data[i].replies + "</span>";
 
     let resqueakCount = document.createElement("p");
-    resqueakCount.innerHTML = data[0].resqueaks;
+    resqueakCount.innerHTML = "<span>" + data[i].resqueaks + "</span>";
 
     let likeCount = document.createElement("p");
-    likeCount.innerHTML = data[0].likes;
+    likeCount.innerHTML = "<span>" + data[i].likes + "</span>";
 
     squeaker.appendChild(squeak);
 
