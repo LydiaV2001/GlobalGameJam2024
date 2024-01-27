@@ -1,6 +1,6 @@
 import { squeakData } from "./constants/squeakData.js";
 
-const categories = [
+let categories = [
 
     "Animal Abuse",
     "Historical Inacurracy",
@@ -19,6 +19,10 @@ export function buildObjectives(){
         let categoryIndex = Math.floor(Math.random() * 5);
     
         objectives[i].innerHTML = categories[categoryIndex];
+
+        categories.splice(categoryIndex, 1);
+
+        console.log(categories);
 
     }
 

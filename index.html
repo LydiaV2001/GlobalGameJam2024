@@ -10,35 +10,103 @@
 
 <body>
 
-    <div id = "notepad_window" class = "window">
-        <div class = "grab_bar">
-            <h2>WritePad--</h2>
-            <image X_image>
-        </div>
-        <div id = "notepad">
-            <div id = "objective_1" class = "objective">
-                <div class = "objective_title"></div>
-                <p>Drag the evidence here</p>
+    <div class="window">
+        <div class="section">
+            <div id = "notepad_window" class = "window">
+                <div class = "grab_bar">
+                    <h2>WritePad--</h2>
+                </div>
+                <div id = "notepad">
+                    <div id = "objective_1" class = "objective">
+                        <div class = "objective_title"></div>
+                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            
+                            <p id="placeholder">
+                                Drag the evidence here
+                            </p>
+        
+                        </div>
+                    </div>
+                    <div id = "objective_2" class = "objective">
+                        <div class = "objective_title"></div>
+                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            Drag the evidence here
+                        </div>
+                    </div>
+                    <div id = "objective_3" class = "objective">
+                        <div class = "objective_title"></div>
+                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            Drag the evidence here
+                        </div> 
+                    </div>
+                    
+                    <!-- <p id="drag1" draggable="true" ondragstart="drag(event)">This is a draggable paragraph. Drag this element into the rectangle.</p> -->
+        
+                </div>
+        
             </div>
-            <div id = "objective_2" class = "objective">
-                <div class = "objective_title"></div>
-                <p>Drag the evidence here</p>
+            <div id = "squeaker_window" class = "window">
+                <div class = "grab_bar">
+                    <img src="images/sqeaker_logo.png" height="50px" alt="squeaker logo">
+                    <h2>Squeaker</h2>
+                </div>
+                <div id = "squeaker">  
+                </div>
             </div>
-            <div id = "objective_3" class = "objective">
-                <div class = "objective_title"></div>
-                <p>Drag the evidence here</p>
+        
+        </div>
+        <div class="section"> 
+            <div id = "taskbar" class = "taskbar">
+                <div>
+                    <p> hi</p>
+                </div>
+                <div id="trash" class="dropbox" ondrop="dropReturnToTimeline(event)" ondragover="allowDrop(event)">
+                    Discard Evidence Here
+                </div> 
             </div>
-        </div>
-    </div>
-    <div id = "squeaker_window" class = "window">
-        <div class = "grab_bar">
-            <h2>Squeaker</h2>
-            <image X_image>
-        </div>
-        <div id = "squeaker">  
         </div>
     </div>
 
+    
+    
+    
+    
+
 </body>
+<script>
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    
+    function drag(ev) {
+        ev.dataTransfer.setData("Text", ev.target.id);
+    }
+    
+    function drop(ev) {
+        let data = ev.dataTransfer.getData("Text");
+        // ev.target.parentNode.removeChild(document.getElementById("placeholder"));
+        ev.target.appendChild(document.getElementById(data));
+        ev.preventDefault();
+    }
+
+    function dropReturnToTimeline(ev) {
+        ev.preventDefault();
+        let data = ev.dataTransfer.getData("Text");
+
+        let target = ev.target;
+
+        target.appendChild(document.getElementById(data));
+
+        if (ev.target == document.getElementById("trash")) {
+            var itemToBeDeleted = document.getElementById(data);
+            //itemToBeDeleted.parentNode.removeChild(itemToBeDeleted); 
+
+            let squeaker = document.getElementById("squeaker");
+            squeaker.appendChild(itemToBeDeleted);
+        }
+    }
+
+</script>
 <script type="Module" src="scripts/main.js"></script>
 </html>
