@@ -1,2 +1,2 @@
 # GlobalGameJam2024
-this is gonna be terrible. 
+this is gonna be stellar. 
