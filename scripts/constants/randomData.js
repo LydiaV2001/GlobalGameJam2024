@@ -188,7 +188,16 @@ export const randomSqueaks = {
         },
         {
             body: "Meatballs",
-        }
+        },
+        {
+            body: "I have some hot takes on the war of spanish succession, but y'all aren't ready for em"
+        },
+        {
+            body: "Seethe, mickey haters. He's spotless."
+        },
+        {
+            body: "Legalize stinky cheese!"
+        },
 
     ]
     
