@@ -71,10 +71,12 @@ span {
 }
 
 .objective_title {
+    display: flex;
     width: 100%;
     height: 4vh;
     font-size: 3vh;
     background-color: grey;
+    align-items: center;
 }
 
 .squeak {

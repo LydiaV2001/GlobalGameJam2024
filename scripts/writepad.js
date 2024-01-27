@@ -1,14 +1,25 @@
-// import { squeakData } from "./constants/squeakData.js";
+import { squeakData } from "./constants/squeakData.js";
 
-// export function buildObjectives(){
+const categories = [
 
-//     let objectives = document.getElementsByClassName("objective");
+    "Animal Abuse",
+    "Historical Inacurracy",
+    "Aggression",
+    "Lobbying",
+    "Bad Influence"
 
-//     for (let i = 0; i < objectives.length; i++){
+]
 
-//         let category = document.createElement("p");
-//         category.innerHTML = "test";
+export function buildObjectives(){
 
-//     }
+    let objectives = document.getElementsByClassName("objective_title");
 
-// }
+    for (let i = 0; i < objectives.length; i++){
+
+        let categoryIndex = Math.floor(Math.random() * 5);
+    
+        objectives[i].innerHTML = categories[categoryIndex];
+
+    }
+
+}
