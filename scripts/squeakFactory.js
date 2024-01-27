@@ -11,7 +11,8 @@ export function buildSqueaks() {
         let squeak = document.createElement("div");
         squeak.classList.add("squeak");
         squeak.classList.add(data[i].category);
-        squeak.setAttribute("id", "drag1")
+        //squeak.setAttribute("id", "drag1")
+        squeak.setAttribute("id", "drag" + i);
         squeak.setAttribute("draggable", "true");
         squeak.setAttribute("ondragstart", "drag(event)");
     

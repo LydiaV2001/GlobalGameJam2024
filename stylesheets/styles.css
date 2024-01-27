@@ -36,6 +36,26 @@ span {
     border: whitesmoke outset 5px;
 }
 
+.taskbar {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: lightgray;
+    border: whitesmoke outset 5px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
 .grab_bar {
     display: flex;
     vertical-align: center;
