@@ -19,6 +19,11 @@ export const randomSqueaks = {
             author: "Walter White",
             tag: "@Heisenberg",
             pfp: "./images/walter.jpg"
+        },
+        {
+            author: "Jared",
+            tag: "@JeredMarkson",
+            pfp: "./images/jared.jpg",
         }
     ],
     squeaks: [ 

@@ -8,23 +8,23 @@ const compareDates = (tweet1, tweet2) => {
 };
 
 function getRandomItem(list) {
-  const randomIndex = Math.floor(Math.random() * list.length);
-  return list[randomIndex];
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
 };
 
 function getRandomDate() {
-  const startDate = new Date('01/01/2009');
-  const endDate = new Date('12/25/2023');
-  const startTimestamp = startDate.getTime();
-  const endTimestamp = endDate.getTime();
+    const startDate = new Date('01/01/2009');
+    const endDate = new Date('12/25/2023');
+    const startTimestamp = startDate.getTime();
+    const endTimestamp = endDate.getTime();
   
-  const randomTimestamp = startTimestamp + Math.random() * (endTimestamp - startTimestamp);
-  const randomDate = new Date(randomTimestamp);
-  const mm = String(randomDate.getMonth() + 1).padStart(2, '0'); // January is 0!
-  const dd = String(randomDate.getDate()).padStart(2, '0');
-  const yy = String(randomDate.getFullYear()).slice(-2);
+    const randomTimestamp = startTimestamp + Math.random() * (endTimestamp - startTimestamp);
+    const randomDate = new Date(randomTimestamp);
+    const mm = String(randomDate.getMonth() + 1).padStart(2, '0'); // January is 0!
+    const dd = String(randomDate.getDate()).padStart(2, '0');
+    const yy = String(randomDate.getFullYear()).slice(-2);
 
-  return `${mm}/${dd}/${yy}`;
+    return `${mm}/${dd}/${yy}`;
 }
 
 
