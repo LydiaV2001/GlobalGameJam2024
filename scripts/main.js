@@ -1,13 +1,6 @@
 import { Category, Squeak } from "/scripts/squeaks.js";
+import { buildSqueaks } from "./squeakFactory.js";
+import { buildObjectives } from "./writepad.js";
 
-console.log("print");
-
-var testSqueak = new Squeak(Category.GeneralBigotry, "ha ha!", null, 69, 420, 1337);
-
-console.log(testSqueak);
-
-class main {
-
-
-
-}
+buildSqueaks();
+buildObjectives();

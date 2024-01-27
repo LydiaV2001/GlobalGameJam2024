@@ -20,6 +20,10 @@ span {
     width: 40%;
 }
 
+#notepad_window p {
+    color: black;
+}
+
 #squeaker_window {
     width: 60%;
 }
