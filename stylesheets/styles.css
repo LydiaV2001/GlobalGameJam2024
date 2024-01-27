@@ -57,3 +57,70 @@ body {
     font-size: 3vh;
     background-color: grey;
 }
+
+.squeak {
+    display: flex;
+    border: 1px solid black;
+    margin: 2rem 5rem;
+    padding: 1rem;
+}
+
+.userInfo {
+
+    display: flex;
+
+}
+
+.userInfo p {
+    padding: 0;
+    margin: 0;
+}
+
+.pfp {
+    height: 40px;
+    border-radius: 100%;
+}
+
+.squeakBody {
+    padding: 0 0.75rem;
+}
+
+.squeakText {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.squeakImage {
+    align-self: center;
+    margin: 1rem 0;
+    width: 640px;
+    height: 360px;
+}
+
+.engagement {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.engagement div {
+
+    display: flex;
+
+}
+
+.engagement p {
+
+    margin: 0;
+    padding: 0 1rem;
+    justify-self: center;
+
+}
+
+.engagement img {
+
+    max-height: 15px;
+
+}

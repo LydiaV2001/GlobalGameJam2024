@@ -7,5 +7,7 @@ var testSqueak = new Squeak(Category.GeneralBigotry, "ha ha!", null, 69, 420, 13
 console.log(testSqueak);
 
 class main {
-    
+
+
+
 }
