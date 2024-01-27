@@ -49,13 +49,13 @@ export function buildSqueaks() {
         let like = document.createElement("div");
     
         let replyIcon = document.createElement("img");
-        replyIcon.setAttribute("src", "/images/reply.png")
+        replyIcon.setAttribute("src", "./images/reply.png")
     
         let resqueakIcon = document.createElement("img");
-        resqueakIcon.setAttribute("src", "/images/resqueak.png")
+        resqueakIcon.setAttribute("src", "./images/resqueak.png")
     
         let likeIcon = document.createElement("img");
-        likeIcon.setAttribute("src", "/images/like.png")
+        likeIcon.setAttribute("src", "./images/like.png")
     
         let replyCount = document.createElement("p");
         replyCount.innerHTML = "<span>" + data[i].replies + "</span>";
