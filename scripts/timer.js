@@ -46,6 +46,7 @@ function endEvidenceStage() {
 
     
     let headline = document.createElement('h1')
+    let button = document.createElement('button')
 
     if (points <= 0) {
         headline.textContent = "The Mouse Got Away With It!"
@@ -56,9 +57,15 @@ function endEvidenceStage() {
     }
 
     let scoreBoard = document.createElement('p')
-    scoreBoard.textContent = "You scored " + points + " points!"
+    scoreBoard.textContent = "You scored " + points + " points!";
+    button.onclick = function() {
+        location.reload();
+      };
+    button.textContent = "Start Again?";
     document.getElementById('notepad').appendChild(headline);
     document.getElementById('notepad').appendChild(scoreBoard);
+    document.getElementById('notepad').appendChild(button);
+
 
     headline.scrollIntoView();
 
