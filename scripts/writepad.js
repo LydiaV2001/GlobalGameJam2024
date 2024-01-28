@@ -1,27 +1,29 @@
 import { squeakData } from "./constants/squeakData.js";
 
 export function buildObjectives(){
+
     let categories = [
 
-    "Mean to Animal",
-    "Cospiracy Theories",
-    "Aggression",
-    "Lobbying",
-    "Stinky Cheese / Sauce Abuse",
-    "subliminalMessages"
-
-];
-
-let categoryClass = [
-
-    "animalAbuse",
-    "historicalInacurracy",
-    "aggression",
-    "lobbying",
-    "drugDealing",
-    "subliminalMessaging"
-
+        "Mean to Animal",
+        "Cospiracy Theories",
+        "Aggression",
+        "Lobbying",
+        "Stinky Cheese / Sauce Abuse",
+        "subliminalMessages"
+    
     ];
+    
+    let categoryClass = [
+    
+        "animalAbuse",
+        "historicalInacurracy",
+        "aggression",
+        "lobbying",
+        "drugDealing",
+        "subliminalMessaging"
+    
+    ];
+    
 
     let objectives = document.getElementsByClassName("objective");
 
