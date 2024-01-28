@@ -35,7 +35,7 @@ export function buildObjectives(){
     
         titles[i].innerHTML = categories[categoryIndex];
         
-        objectives[i].classList.add(categoryClass[categoryIndex]);
+        objectives[i].setAttribute("category", categories[categoryIndex]);
 
         categories.splice(categoryIndex, 1);
     }
@@ -44,21 +44,58 @@ export function buildObjectives(){
 
 export function calculatePoints(){
 
+    let points = 0;
+
     let objective1 = document.getElementById("objective_1");
     let objective2 = document.getElementById("objective_2");
     let objective3 = document.getElementById("objective_3");
 
+    let category1 = objective1.getAttribute("category");
+    let category2 = objective1.getAttribute("category");
+    let category3 = objective1.getAttribute("category");
+
     let squeaks1 = objective1.getElementsByClassName("squeak");
+    let squeaks2 = objective1.getElementsByClassName("squeak");
+    let squeaks3 = objective1.getElementsByClassName("squeak");
 
-    console.log(squeaks1);
+    for (let i = 0; i < squeaks1.length; i++){
 
-    console.log("length: " + squeaks1.length);
-    
-    //  for (let i = 0; i < 10; i++){
-        
-    //      console.log("AAAAAAAAAAAAAAAAA");
-    //     console.log(squeaks1[i]);
+        let squeakCategory = squeaks1[i].getAttribute("category");
 
-    //  }
+        if (squeakCategory == category1){
+            points++;
+        }
+        else {
+            points--;
+        }
 
+    }
+
+    for (let i = 0; i < squeaks2.length; i++){
+
+        let squeakCategory = squeaks1[i].getAttribute("category");
+
+        if (squeakCategory == category1){
+            points++;
+        }
+        else {
+            points--;
+        }
+
+    }
+
+    for (let i = 0; i < squeaks3.length; i++){
+
+        let squeakCategory = squeaks1[i].getAttribute("category");
+
+        if (squeakCategory == category1){
+            points++;
+        }
+        else {
+            points--;
+        }
+
+    }
+
+    console.log("points: " + points);
 }

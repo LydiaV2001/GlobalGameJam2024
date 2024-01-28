@@ -1,4 +1,5 @@
 import { createSqueak } from "./squeakFactory.js";
+import { calculatePoints } from "./writepad.js";
 
 const endSqueak = {
         author: "Mickey Mouse",
@@ -14,7 +15,7 @@ const endSqueak = {
     }
 
 export function timer() {
-    var sec = 60;
+    var sec = 10;
     var timer = setInterval(function () {
         let min = Math.floor(sec/60)
         if (sec%60 < 10) {
@@ -34,4 +35,5 @@ export function timer() {
 function endEvidenceStage() {
     document.getElementById('squeaker').innerHTML = "";
     createSqueak(endSqueak, 1000)
+    calculatePoints();
 }
