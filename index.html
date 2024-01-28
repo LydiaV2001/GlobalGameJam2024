@@ -83,12 +83,13 @@
     }
 
     function drop(ev) {
+        ev.preventDefault();
         let data = ev.dataTransfer.getData("Text");
         // ev.target.parentNode.removeChild(document.getElementById("placeholder"));
 
         if ((ev.target == document.getElementById("box_1")) || (ev.target == document.getElementById("box_2")) || (ev.target == document.getElementById("box_3")) ) {
             ev.target.appendChild(document.getElementById(data));
-            ev.preventDefault();
+            
         }
 
         
