@@ -1,22 +1,22 @@
 import { squeakData } from "./constants/squeakData.js";
 
-let categories = [
-
-    "Animal Abuse",
-    "Historical Inacurracy",
-    "Aggression",
-    "Lobbying",
-    "Bad Influence"
-
-];
-
 export function buildObjectives(){
+    let categories = [
+
+        "Mean to Animals",
+        "Conspiracy Theories",
+        "Aggression",
+        "Corporate Lobbying",
+        "Stinky Cheese/Sauce Abuse",
+        "Subliminal Messaging",
+
+    ];
 
     let objectives = document.getElementsByClassName("objective_title");
 
     for (let i = 0; i < objectives.length; i++){
 
-        let categoryIndex = Math.floor(Math.random() * 5);
+        let categoryIndex = Math.floor(Math.random() * categories.length);
     
         objectives[i].innerHTML = categories[categoryIndex];
 
