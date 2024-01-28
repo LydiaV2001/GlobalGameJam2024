@@ -19,19 +19,19 @@
                 <div id = "notepad">
                     <div id = "objective_1" class = "objective">
                         <div class = "objective_title"></div>
-                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div id = "box_1" class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
                             Drag the evidence Here
                         </div>
                     </div>
                     <div id = "objective_2" class = "objective">
                         <div class = "objective_title"></div>
-                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div id = "box_2" class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
                             Drag the evidence here
                         </div>
                     </div>
                     <div id = "objective_3" class = "objective">
                         <div class = "objective_title"></div>
-                        <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div id = "box_3" class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
                             Drag the evidence here
                         </div> 
                     </div>
@@ -82,8 +82,13 @@
     function drop(ev) {
         let data = ev.dataTransfer.getData("Text");
         // ev.target.parentNode.removeChild(document.getElementById("placeholder"));
-        ev.target.appendChild(document.getElementById(data));
-        ev.preventDefault();
+
+        if ((ev.target == document.getElementById("box_1")) || (ev.target == document.getElementById("box_2")) || (ev.target == document.getElementById("box_3")) ) {
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+        }
+
+        
     }
 
     function dropReturnToTimeline(ev) {
