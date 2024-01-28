@@ -7,7 +7,7 @@ export const squeakData = {
             date: "Today",
             pfp: "./images/mickey.jpg",
             category: "funDealer",
-            body: "I love fun things!",
+            body: "I am LOVING life today!",
             image: "./images/Steamboat-Willie.webp",
             likes: "1M",
             resqueaks: "500K",
@@ -1067,6 +1067,18 @@ export const squeakData = {
         likes: "190K",
         resqueaks: "130K",
         replies: "119K"
+    },
+    {
+        author: "Mickey Mouse",
+        tag: "@MickeyMouseOfficial",
+        date: "04/11/14",
+        pfp: "./images/mickey.jpg",
+        category: "tame",
+        body: "If you have multiple personality disorder, and you date multiple of your personalities, is that polyamory? Asking for another personality",
+        image: "",
+        likes: "1M",
+        resqueaks: "900K",
+        replies: "3M"
     }
 
     ]

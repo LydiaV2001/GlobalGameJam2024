@@ -101,6 +101,8 @@ span {
     align-items: center;
 }
 
+.
+
 .squeak {
     display: flex;
     border: 1px solid #514259;
@@ -171,5 +173,6 @@ span {
 .dropbox {
 
     margin: 2rem;
+    border: lightgrey 2px dotted;
 
 }

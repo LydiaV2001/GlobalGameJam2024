@@ -7,7 +7,7 @@ export function buildObjectives(){
 
         "Mean to Animals",
         "Conspiracy Theories",
-        "Aggression",
+        "Aggression/Violence",
         "Corporate Lobbying",
         "Stinky Cheese/Sauce Abuse"
 
