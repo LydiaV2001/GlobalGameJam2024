@@ -3,14 +3,12 @@ import { squeakData } from "./constants/squeakData.js";
 export function buildObjectives(){
 
     let categories = [
-
         "Mean to Animal",
         "Cospiracy Theories",
         "Aggression",
         "Lobbying",
         "Stinky Cheese / Sauce Abuse",
-        "subliminalMessages"
-    
+        "Subliminal Messaging"
     ];
     
     let categoryClass = [

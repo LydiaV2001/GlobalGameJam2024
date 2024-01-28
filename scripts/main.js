@@ -5,4 +5,8 @@ import { timer } from "./timer.js";
 buildSqueaks();
 buildObjectives();
 timer();
-calculatePoints();
+//calculatePoints();
+
+const audioElement = new Audio("../Assets/audio/Mickeyyyyyy.mp3");
+audioElement.play();
+audioElement.loop(true);
