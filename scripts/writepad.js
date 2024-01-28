@@ -9,7 +9,7 @@ export function buildObjectives(){
         "Aggression",
         "Lobbying",
         "Stinky Cheese / Sauce Abuse",
-        "subliminalMessages"
+        "Subliminal Messages"
     
     ];
     
