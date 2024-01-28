@@ -135,7 +135,7 @@ export function buildSqueaks() {
         if (data[i].image != "") {
             body.appendChild(image);
         } else {
-            console.log("Fuck")
+            // console.log("Fuck")
         }
         body.appendChild(engagement);
     
