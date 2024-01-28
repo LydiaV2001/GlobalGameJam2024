@@ -2,25 +2,62 @@ import { squeakData } from "./constants/squeakData.js";
 
 let categories = [
 
-    "Animal Abuse",
-    "Historical Inacurracy",
+    "Mean to Animal",
+    "Cospiracy Theories",
     "Aggression",
     "Lobbying",
-    "Bad Influence"
+    "Stinky Cheese / Sauce Abuse",
+    "subliminalMessages"
+
+];
+
+let categoryClass = [
+
+    "animalAbuse",
+    "historicalInacurracy",
+    "aggression",
+    "lobbying",
+    "drugDealing",
+    "subliminalMessaging"
 
 ];
 
 export function buildObjectives(){
 
-    let objectives = document.getElementsByClassName("objective_title");
+    let objectives = document.getElementsByClassName("objective");
 
-    for (let i = 0; i < objectives.length; i++){
+    let titles = document.getElementsByClassName("objective_title");
 
-        let categoryIndex = Math.floor(Math.random() * 5);
+    for (let i = 0; i < titles.length; i++){
+
+        let categoryIndex = Math.floor(Math.random() * categories.length);
     
-        objectives[i].innerHTML = categories[categoryIndex];
+        titles[i].innerHTML = categories[categoryIndex];
+        
+        objectives[i].classList.add(categoryClass[categoryIndex]);
 
         categories.splice(categoryIndex, 1);
     }
+
+}
+
+export function calculatePoints(){
+
+    let objective1 = document.getElementById("objective_1");
+    let objective2 = document.getElementById("objective_2");
+    let objective3 = document.getElementById("objective_3");
+
+    let squeaks1 = objective1.getElementsByClassName("squeak");
+
+    console.log(squeaks1);
+
+    console.log("length: " + squeaks1.length);
+    
+    //  for (let i = 0; i < 10; i++){
+        
+    //      console.log("AAAAAAAAAAAAAAAAA");
+    //     console.log(squeaks1[i]);
+
+    //  }
 
 }
