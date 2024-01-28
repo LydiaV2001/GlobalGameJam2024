@@ -57,7 +57,7 @@
         </div>
         <div class="section">
             <div id="taskbar" class="taskbar">
-                <div class="dropbox"">
+                <div class="dropbox">
                     Start
                 </div>
                 <div id="trash" class="dropbox" ondrop="dropReturnToTimeline(event)" ondragover="allowDrop(event)">
@@ -79,9 +79,14 @@
 <script>
 
     function timer() {
-        var sec = 900;
+        var sec = 180;
         var timer = setInterval(function () {
-            document.getElementById('timer').innerHTML = sec;
+            let min = Math.floor(sec/60)
+            if (sec%60 < 10) {
+                document.getElementById('timer').innerHTML = min + ":0" + sec%60;
+            } else {
+                document.getElementById('timer').innerHTML = min + ":" + sec%60;
+            }
             sec--;
             console.log(sec);
             if (sec < 0) {
