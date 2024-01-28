@@ -8,81 +8,96 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 
-<body>
+<body onload="timer()">
 
     <div>
         <div class="section">
-            <div id = "notepad_window" class = "window">
-                <div class = "grab_bar">
+            <div id="notepad_window" class="window">
+                <div class="grab_bar">
                     <h2>WritePad--</h2>
                 </div>
-                <div id = "notepad">
-                    <div id = "objective_1" class = "objective">
-                        <div class = "objective_title"></div>
+                <div id="notepad">
+                    <div id="objective_1" class="objective">
+                        <div class="objective_title"></div>
                         <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            
+
                             <p id="placeholder">
                                 Drag the evidence here
                             </p>
-        
+
                         </div>
                     </div>
-                    <div id = "objective_2" class = "objective">
-                        <div class = "objective_title"></div>
+                    <div id="objective_2" class="objective">
+                        <div class="objective_title"></div>
                         <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
                             Drag the evidence here
                         </div>
                     </div>
-                    <div id = "objective_3" class = "objective">
-                        <div class = "objective_title"></div>
+                    <div id="objective_3" class="objective">
+                        <div class="objective_title"></div>
                         <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
                             Drag the evidence here
-                        </div> 
+                        </div>
                     </div>
-                    
+
                     <!-- <p id="drag1" draggable="true" ondragstart="drag(event)">This is a draggable paragraph. Drag this element into the rectangle.</p> -->
-        
+
                 </div>
-        
+
             </div>
-            <div id = "squeaker_window" class = "window">
-                <div class = "grab_bar">
+            <div id="squeaker_window" class="window">
+                <div class="grab_bar">
                     <img src="images/sqeaker_logo.png" height="50px" alt="squeaker logo">
                     <h2>Squeaker</h2>
                 </div>
-                <div id = "squeaker">  
+                <div id="squeaker">
                 </div>
             </div>
-        
+
         </div>
-        <div class="section"> 
-            <div id = "taskbar" class = "taskbar">
-                <div>
-                    <p> hi</p>
+        <div class="section">
+            <div id="taskbar" class="taskbar">
+                <div class="dropbox"">
+                    Start
                 </div>
                 <div id="trash" class="dropbox" ondrop="dropReturnToTimeline(event)" ondragover="allowDrop(event)">
                     Discard Evidence Here
-                </div> 
+                </div>
+                <div id="timer" class="dropbox">
+                    Timer:
+                </div>
             </div>
         </div>
     </div>
 
-    
-    
-    
-    
+
+
+
+
 
 </body>
 <script>
 
+    function timer() {
+        var sec = 900;
+        var timer = setInterval(function () {
+            document.getElementById('timer').innerHTML = sec;
+            sec--;
+            console.log(sec);
+            if (sec < 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+
     function allowDrop(ev) {
         ev.preventDefault();
     }
-    
+
     function drag(ev) {
         ev.dataTransfer.setData("Text", ev.target.id);
     }
-    
+
     function drop(ev) {
         let data = ev.dataTransfer.getData("Text");
         // ev.target.parentNode.removeChild(document.getElementById("placeholder"));
@@ -109,4 +124,5 @@
 
 </script>
 <script type="Module" src="scripts/main.js"></script>
+
 </html>
