@@ -153,5 +153,4 @@ export function buildSqueaks() {
         like.appendChild(likeCount);
     
     }
-
 }
