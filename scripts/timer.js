@@ -15,7 +15,7 @@ const endSqueak = {
     }
 
 export function timer() {
-    var sec = 150;
+    var sec = 300;
     var timer = setInterval(function () {
         let min = Math.floor(sec/60)
         if (sec%60 < 10) {
