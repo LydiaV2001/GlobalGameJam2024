@@ -35,9 +35,10 @@ export function buildObjectives(){
     
         titles[i].innerHTML = categories[categoryIndex];
         
-        objectives[i].setAttribute("category", categories[categoryIndex]);
+        objectives[i].setAttribute("category", categoryClass[categoryIndex]);
 
         categories.splice(categoryIndex, 1);
+        categoryClass.splice(categoryIndex, 1);
     }
 
 }
@@ -51,14 +52,17 @@ export function calculatePoints(){
     let objective3 = document.getElementById("objective_3");
 
     let category1 = objective1.getAttribute("category");
-    let category2 = objective1.getAttribute("category");
-    let category3 = objective1.getAttribute("category");
+    let category2 = objective2.getAttribute("category");
+    let category3 = objective3.getAttribute("category");
 
     let squeaks1 = objective1.getElementsByClassName("squeak");
-    let squeaks2 = objective1.getElementsByClassName("squeak");
-    let squeaks3 = objective1.getElementsByClassName("squeak");
+    let squeaks2 = objective2.getElementsByClassName("squeak");
+    let squeaks3 = objective3.getElementsByClassName("squeak");
+
+    debugger;
 
     for (let i = 0; i < squeaks1.length; i++){
+        
 
         let squeakCategory = squeaks1[i].getAttribute("category");
 
@@ -73,9 +77,9 @@ export function calculatePoints(){
 
     for (let i = 0; i < squeaks2.length; i++){
 
-        let squeakCategory = squeaks1[i].getAttribute("category");
+        let squeakCategory = squeaks2[i].getAttribute("category");
 
-        if (squeakCategory == category1){
+        if (squeakCategory == category2){
             points++;
         }
         else {
@@ -86,9 +90,9 @@ export function calculatePoints(){
 
     for (let i = 0; i < squeaks3.length; i++){
 
-        let squeakCategory = squeaks1[i].getAttribute("category");
+        let squeakCategory = squeaks3[i].getAttribute("category");
 
-        if (squeakCategory == category1){
+        if (squeakCategory == category3){
             points++;
         }
         else {
@@ -96,6 +100,16 @@ export function calculatePoints(){
         }
 
     }
+
+    if (points > 0) {
+        alert("Your score is: " + points + ". Congratulations, you have now ruined this mouse's life. Are you happy about yourself?");
+    }
+
+    else {
+        alert("Your score is: " + points + ". The mouse's reputation has been untarnished.");
+    }
+
+    
 
     console.log("points: " + points);
 }
