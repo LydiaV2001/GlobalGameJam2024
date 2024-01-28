@@ -98,16 +98,6 @@ export function calculatePoints(){
         }
 
     }
-
-    if (points > 0) {
-        alert("Your score is: " + points + ". Congratulations, you have now ruined this mouse's life. Are you happy about yourself?");
-    }
-
-    else {
-        alert("Your score is: " + points + ". The mouse's reputation has been untarnished.");
-    }
-
     
-
-    console.log("points: " + points);
+    return points;
 }

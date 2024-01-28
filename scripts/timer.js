@@ -15,7 +15,7 @@ const endSqueak = {
     }
 
 export function timer() {
-    var sec = 120;
+    var sec = 1;
     var timer = setInterval(function () {
         let min = Math.floor(sec/60)
         if (sec%60 < 10) {
@@ -35,5 +35,31 @@ export function timer() {
 function endEvidenceStage() {
     document.getElementById('squeaker').innerHTML = "";
     createSqueak(endSqueak, 1000)
-    calculatePoints();
+    let points = calculatePoints();
+
+    let court_image = document.createElement('img');
+    court_image.src = "./images/corut.png";
+    court_image.style.width = "100%"
+
+    document.getElementById('notepad_grab_bar').innerHTML = "Court.exe";
+    document.getElementById('notepad').appendChild(court_image)
+
+    
+    let headline = document.createElement('h1')
+
+    if (points <= 0) {
+        headline.textContent = "The Mouse Got Away With It!"
+    } else if (points <= 4) {
+        headline.textContent = "Mickey Mouse Apologizes for Controversial Squeaks!"
+    } else {
+        headline.textContent = "Mickey Mouse Dropped From Disney Following Controversial Squeaks!"
+    }
+
+    let scoreBoard = document.createElement('p')
+    scoreBoard.textContent = "You scored " + points + " points!"
+    document.getElementById('notepad').appendChild(headline);
+    document.getElementById('notepad').appendChild(scoreBoard);
+
+    headline.scrollIntoView();
+
 }
