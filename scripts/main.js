@@ -4,8 +4,8 @@ import { timer } from "./timer.js";
 //const audioElement = new Audio("../Assets/audio/Mickeyyyyyy.mp3");
 
 function startGame() {
-	//audioElement.play();
-	//audioElement.loop(true);
+	audioElement.play();
+	audioElement.loop(true);
 	buildSqueaks();
 	buildObjectives();
 	timer();
