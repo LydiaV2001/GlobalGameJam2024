@@ -1,6 +1,7 @@
 import { squeakData } from "./constants/squeakData.js";
 
-let categories = [
+export function buildObjectives(){
+    let categories = [
 
     "Mean to Animal",
     "Cospiracy Theories",
@@ -20,9 +21,7 @@ let categoryClass = [
     "drugDealing",
     "subliminalMessaging"
 
-];
-
-export function buildObjectives(){
+    ];
 
     let objectives = document.getElementsByClassName("objective");
 
