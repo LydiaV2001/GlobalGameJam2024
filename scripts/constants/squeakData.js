@@ -28,18 +28,6 @@ export const squeakData = {
         {
             author: "Mickey Mouse",
             tag: "@MickeyMouseOfficial",
-            date: "Today",
-            pfp: "./images/mickey.jpg",
-            category: "tame",
-            body: "Minnie and I enjoyed a lovely sunset in Toontown. What's your favorite time of day? #SimpleJoys",
-            image: "",
-            likes: "1M",
-            resqueaks: "500K",
-            replies: "10K"
-        },
-        {
-            author: "Mickey Mouse",
-            tag: "@MickeyMouseOfficial",
             date: "01/01/09",
             pfp: "./images/mickey.jpg",
             category: "tame",
@@ -248,7 +236,7 @@ export const squeakData = {
             pfp: "./images/mickey.jpg",
             category: "animalAbuse",
             body: "Cruella is the only girlboss we need! #CruellaDidNothingWrong",
-            image: "[A picture of a coat made out of puppies]",
+            image: "",
             likes: "5K",
             resqueaks: "700K",
             replies: "9M"
@@ -260,7 +248,7 @@ export const squeakData = {
             pfp: "./images/mickey.jpg",
             category: "animalAbuse",
             body: "Currently in Canada, filming our next nature documentary, White Wilderness! #NatureIsBeautiful",
-            image: "[A selfie. In the background is a line of Lemmings going off a cliff]",
+            image: "./images/lemmingscrop.png",
             likes: "5K",
             resqueaks: "700K",
             replies: "9M"
@@ -296,7 +284,7 @@ export const squeakData = {
             pfp: "./images/mickey.jpg",
             category: "aggression",
             body: "Happy Spring! Time to get this cleaning out of the way! #SpringCleaning",
-            image: "[image: Mickey vacuuming up ashes in the Pirates of the Caribbean ride]",
+            image: "",
             likes: "4K",
             resqueaks: "500K",
             replies: "5K"
@@ -308,7 +296,7 @@ export const squeakData = {
             pfp: "./images/mickey.jpg",
             category: "lobbying",
             body: "Just got this copyright extension granted, ha ha! #ForAHundredYearsMore",
-            image: "[A still from a party in the Mickey Mouse clubhouse. There is a table in the shape of Mickey's head, on top of it lays a pile of stinky cheese.]",
+            image: "",
             likes: "15K",
             resqueaks: "1K",
             replies: "100K"
@@ -798,8 +786,8 @@ export const squeakData = {
         date: "01/07/21",
         pfp: "./images/mickey.jpg",
         category: "sympathetic",
-        body: "[image]",
-        image: "",
+        body: "",
+        image: "./images/jan6thapology.png",
         likes: "18K",
         resqueaks: "8K",
         replies: "15K"
