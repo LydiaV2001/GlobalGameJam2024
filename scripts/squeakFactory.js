@@ -58,14 +58,18 @@ export function buildSqueaks() {
     data.sort(compareDates)
     
     for (let i = 0; i < data.length; i++) {
-    
-        let squeaker = document.getElementById("squeaker");
+        createSqueak(data[i], i);
+    }
+}
+
+export function createSqueak(data, num) {
+    let squeaker = document.getElementById("squeaker");
     
         let squeak = document.createElement("div");
         squeak.classList.add("squeak");
-        squeak.classList.add(data[i].category);
+        squeak.classList.add(data.category);
         //squeak.setAttribute("id", "drag1")
-        squeak.setAttribute("id", "drag" + i);
+        squeak.setAttribute("id", "drag" + num);
         squeak.setAttribute("draggable", "true");
         squeak.setAttribute("ondragstart", "drag(event)");
     
@@ -74,17 +78,17 @@ export function buildSqueaks() {
     
         let pfp = document.createElement("img");
         pfp.classList.add("pfp");
-        pfp.setAttribute("src", data[i].pfp);
+        pfp.setAttribute("src", data.pfp);
     
         let title = document.createElement("p");
         title.innerHTML = 
             "<b>" +
-            data[i].author + 
+            data.author + 
             "</b>" + 
             " " +
             "<span>" +
-            data[i].tag + " · " +
-            data[i].date +
+            data.tag + " · " +
+            data.date +
             "</span>";
     
         let body = document.createElement("div");
@@ -92,11 +96,11 @@ export function buildSqueaks() {
     
         let text = document.createElement("p");
         text.classList.add("squeakText");
-        text.innerHTML = data[i].body;
+        text.innerHTML = data.body;
         
         let image = document.createElement("img");
         image.classList.add("squeakImage");
-        image.setAttribute("src", data[i].image);
+        image.setAttribute("src", data.image);
     
         let engagement = document.createElement("div");
         engagement.classList.add("engagement");
@@ -115,13 +119,13 @@ export function buildSqueaks() {
         likeIcon.setAttribute("src", "./images/like.png")
     
         let replyCount = document.createElement("p");
-        replyCount.innerHTML = "<span>" + data[i].replies + "</span>";
+        replyCount.innerHTML = "<span>" + data.replies + "</span>";
     
         let resqueakCount = document.createElement("p");
-        resqueakCount.innerHTML = "<span>" + data[i].resqueaks + "</span>";
+        resqueakCount.innerHTML = "<span>" + data.resqueaks + "</span>";
     
         let likeCount = document.createElement("p");
-        likeCount.innerHTML = "<span>" + data[i].likes + "</span>";
+        likeCount.innerHTML = "<span>" + data.likes + "</span>";
     
         squeaker.appendChild(squeak);
     
@@ -132,7 +136,7 @@ export function buildSqueaks() {
     
         body.appendChild(userInfo);
         body.appendChild(text);
-        if (data[i].image != "") {
+        if (data.image != "") {
             body.appendChild(image);
         } else {
             console.log("Fuck")
@@ -151,7 +155,4 @@ export function buildSqueaks() {
     
         like.appendChild(likeIcon);
         like.appendChild(likeCount);
-    
-    }
-
 }
