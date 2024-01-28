@@ -64,10 +64,11 @@ export function buildSqueaks() {
         let squeak = document.createElement("div");
         squeak.classList.add("squeak");
         squeak.classList.add(data[i].category);
-        //squeak.setAttribute("id", "drag1")
         squeak.setAttribute("id", "drag" + i);
         squeak.setAttribute("draggable", "true");
         squeak.setAttribute("ondragstart", "drag(event)");
+
+        
     
         let userInfo = document.createElement("div");
         userInfo.classList.add("userInfo");
@@ -152,6 +153,20 @@ export function buildSqueaks() {
         like.appendChild(likeIcon);
         like.appendChild(likeCount);
     
+        let random = Math.floor(Math.random() * 101);        ;
+
+        if (random == 0) {
+            let secretLink = document.createElement("a");
+            secretLink.setAttribute("href", "./secret.html");
+            let secretIcon = document.createElement("img");
+            secretIcon.setAttribute("src", "./images/reply.png");
+
+            secretLink.appendChild(secretIcon);
+
+            engagement.appendChild(secretLink);
+
+        }
+
     }
 
 }
