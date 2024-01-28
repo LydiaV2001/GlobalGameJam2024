@@ -8,7 +8,7 @@ let categories = [
     "Lobbying",
     "Bad Influence"
 
-]
+];
 
 export function buildObjectives(){
 
@@ -21,9 +21,6 @@ export function buildObjectives(){
         objectives[i].innerHTML = categories[categoryIndex];
 
         categories.splice(categoryIndex, 1);
-
-        console.log(categories);
-
     }
 
 }
