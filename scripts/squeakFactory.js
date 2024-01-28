@@ -58,18 +58,14 @@ export function buildSqueaks() {
     data.sort(compareDates)
     
     for (let i = 0; i < data.length; i++) {
-        createSqueak(data[i], i);
-    }
-}
-
-export function createSqueak(data, num) {
-    let squeaker = document.getElementById("squeaker");
+    
+        let squeaker = document.getElementById("squeaker");
     
         let squeak = document.createElement("div");
         squeak.classList.add("squeak");
-        squeak.classList.add(data.category);
+        squeak.classList.add(data[i].category);
         //squeak.setAttribute("id", "drag1")
-        squeak.setAttribute("id", "drag" + num);
+        squeak.setAttribute("id", "drag" + i);
         squeak.setAttribute("draggable", "true");
         squeak.setAttribute("ondragstart", "drag(event)");
     
@@ -78,17 +74,17 @@ export function createSqueak(data, num) {
     
         let pfp = document.createElement("img");
         pfp.classList.add("pfp");
-        pfp.setAttribute("src", data.pfp);
+        pfp.setAttribute("src", data[i].pfp);
     
         let title = document.createElement("p");
         title.innerHTML = 
             "<b>" +
-            data.author + 
+            data[i].author + 
             "</b>" + 
             " " +
             "<span>" +
-            data.tag + " · " +
-            data.date +
+            data[i].tag + " · " +
+            data[i].date +
             "</span>";
     
         let body = document.createElement("div");
@@ -96,11 +92,11 @@ export function createSqueak(data, num) {
     
         let text = document.createElement("p");
         text.classList.add("squeakText");
-        text.innerHTML = data.body;
+        text.innerHTML = data[i].body;
         
         let image = document.createElement("img");
         image.classList.add("squeakImage");
-        image.setAttribute("src", data.image);
+        image.setAttribute("src", data[i].image);
     
         let engagement = document.createElement("div");
         engagement.classList.add("engagement");
@@ -119,13 +115,13 @@ export function createSqueak(data, num) {
         likeIcon.setAttribute("src", "./images/like.png")
     
         let replyCount = document.createElement("p");
-        replyCount.innerHTML = "<span>" + data.replies + "</span>";
+        replyCount.innerHTML = "<span>" + data[i].replies + "</span>";
     
         let resqueakCount = document.createElement("p");
-        resqueakCount.innerHTML = "<span>" + data.resqueaks + "</span>";
+        resqueakCount.innerHTML = "<span>" + data[i].resqueaks + "</span>";
     
         let likeCount = document.createElement("p");
-        likeCount.innerHTML = "<span>" + data.likes + "</span>";
+        likeCount.innerHTML = "<span>" + data[i].likes + "</span>";
     
         squeaker.appendChild(squeak);
     
@@ -136,7 +132,7 @@ export function createSqueak(data, num) {
     
         body.appendChild(userInfo);
         body.appendChild(text);
-        if (data.image != "") {
+        if (data[i].image != "") {
             body.appendChild(image);
         } else {
             console.log("Fuck")
@@ -155,4 +151,6 @@ export function createSqueak(data, num) {
     
         like.appendChild(likeIcon);
         like.appendChild(likeCount);
+    
+    }
 }
